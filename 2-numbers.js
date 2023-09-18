@@ -11,76 +11,79 @@
  * powerof: **
  * modulo: %
  */
+let myNumber = 5
+console.log(5 % 2 === 0)
+// 2 + 2 reste 1
 
-let result = 2 / 3
-
-let remainder = 3 % 2
-
-const amountOfMinutes = 132
-
-const amountOfHours = Math.floor(amountOfMinutes / 60)
-const amountOfRemainingMinutes = amountOfMinutes % 60
-console.log(amountOfHours, amountOfRemainingMinutes)
+// let amountOfSeconds = 76543348
+let amountOfSeconds = 125
+console.log(amountOfSeconds % 60)
 
 // Order of operations
 
-/**
- * 5+5
- * 10 * 2
- * console.log
- */
+let resultOfMath = (3 * 5 + 2 * 3) * 2
+//  (15 + 2 * 3) * 2
+//  (15 + 6) * 2
+//   21 * 2
+//   42
 
 /**
  * Shorthand math
  */
 
 let total = 0
-
 total = total + 2
-total = total + 3
-total += 5
-total *= 3
+total += 2
+total *= 4
+total /= 5
+total **= 4
 console.log(total)
+
+let incrementOrDecrement = 0
+// pre increment
+console.log(++incrementOrDecrement)
+// post increment
+console.log(incrementOrDecrement++)
 
 // Math constructor
 
-console.log(Math.PI)
-
+const π = Math.PI
+/**
+ * Math.ceil  2.25 => 3
+ * Math.floor  2.75 => 2
+ * Math.round  2.45 => 2
+ * Math.random
+ */
+console.log(Math.round(2.5))
+const biggestNumber = Infinity
 // Getting a random number
-console.log("======Random======")
-// console.log(Math.random())
-const randomFloat = Math.random() // .76436
-console.log(randomFloat)
-const randomLessThanTen = randomFloat * 10 // 7.6436
-console.log(randomLessThanTen)
-const randomInteger = Math.floor(randomLessThanTen) //  7
+
+let randomFloat = Math.random()
+console.log("Math.random(): ", randomFloat)
+const multipliedBy10 = randomFloat * 10
+console.log(multipliedBy10)
+const randomInteger = Math.floor(multipliedBy10)
 console.log(randomInteger)
 
-const quickRandom = Math.floor(Math.random() * 20)
-
-const myArray = ["Hungry", "Cat", "Sleep", "Nap"]
-
-console.log(myArray[Math.floor(Math.random() * myArray.length)])
-
+const randomNumberInOneGo = Math.floor(Math.random() * 10)
 // Operations between numbers and Strings
+console.log("Operations beween numbers and Strings")
+let whatIsThat = "1" + 1
+// "Hello" + " World"
+console.log(whatIsThat)
+const whatIsThatAgain = 1 + "1"
+console.log(whatIsThatAgain)
 
-console.log("2" + 2)
-console.log("2" - 2)
-const numberAsAString = "42aszf"
-
-// const gettingANumber = numberAsAString * 1
-const gettingANumber = Number(numberAsAString)
-console.log(gettingANumber)
-console.log(typeof gettingANumber)
+console.log(+"5")
+console.log("5" * 1)
+console.log(Number("5"))
 
 // NaN
-console.log(5 * "a")
 
-console.log(0.1 + 0.2)
+console.log(typeof NaN)
+console.log("Yo" * 7)
+const probablyNotANumber = "Yo" * 2
+console.log(isNaN(probablyNotANumber))
+// console.log([] * 7)
 
 // Incrementing / Decrementing numbers
-
-let myLastNumber = 0
-myLastNumber += 1
-myLastNumber++
-myLastNumber--

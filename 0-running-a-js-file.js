@@ -1,2 +1,2 @@
-// Executing a file:
-// in your terminal: node path-to/your-file.js
+// node path-vers/mon-fichier.js
+console.log("Welcome to JS folks!")

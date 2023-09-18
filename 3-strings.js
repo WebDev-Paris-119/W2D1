@@ -9,60 +9,61 @@
  * backticks: ``
  */
 
-let teachingStaff = "Florian, Daniel, I'll break"
-let programmingHaiku = `I do Programming,
-Programing is what I do
-The sun is shining
-`
-// `
-// <div>
-//   <span>${teachingStaff}</span>
-// </div>
-// `
-
 //  Concatenation
 
-let firstName = "Rudy"
-console.log("Hello " + firstName + "!")
-console.log(`Hello ${firstName}!`)
+const hello = "Hello"
+const devClass = "WebDev-119"
+const greeting = hello + " " + devClass + "!"
+console.log(greeting)
 
 // Advantages of backticks
+const betterGreetings = `${hello} ${devClass}!!!!`
+// let htmlCard = '<div class="card">
+// <h2>Title</h2>
+// </div>
+// '
+let htmlCard = `
+<div class="card">
+  <h2>Title</h2>
+  <p>Lorem 😀</p>
+</div>`
 
 //  Template literal
 
 // Multi-line
 
 // index in Strings
-console.log(firstName[firstName.length - 1])
-console.log(firstName.at(-1))
-console.log(firstName.includes("ude"))
+let myName = "floroan"
+console.log(myName[0].toUpperCase() + myName.slice(1))
+console.log(myName.toUpperCase())
 
+console.log(myName.includes("ori"))
+// const randomThing = myName.replaceAll("o", "Well hello there, what's up?")
+let randomThing = myName.replaceAll("o", "*")
+console.log(randomThing)
+console.log(randomThing.length)
 /**
  * Some available methods
  * length, upper / lower case, includes, replace, replaceAll ...
  */
-console.log(programmingHaiku.length)
-console.log(programmingHaiku.toUpperCase())
-console.log(programmingHaiku.toLowerCase().includes("pro"))
-console.log("RegExp attempt: ", programmingHaiku.match(/pro/i))
-console.log("a" < "A")
-//           97   65
 
 // Immutability
+// randomThing = randomThing[0].toUpperCase() + randomThing.slice(1)
+randomThing[0].toUpperCase() // "F"
 
-const modifiedName =
-	firstName.slice(0, 3) + firstName[firstName.length - 1].toUpperCase()
-
-console.log(modifiedName)
+console.log(randomThing)
+console.log(myName)
 
 // Comparing strings
 
-console.log("abc" < "CDE")
+console.log("Anoureth" < "alorian") // true
+console.log("Anoureth" < "Alorian") // false
 
-console.log("String comparisons: ", "2" === 2)
+console.log("Anoureth".toLowerCase() < "alorian".toLowerCase())
 
-// function sum(a:number, b:number) {
-// 	return a + b
-// }
+// localeCompare
+console.log(
+	"RÉSERVÉ".localeCompare("reserve", undefined, { sensitivity: "base" })
+)
 
-// sum(3, 5)
+myName.startsWith("fl")
