@@ -2,76 +2,74 @@
 
 // Anatomy of a for-loop
 // for (variable initialisation ; condition ; increment / decrement) {}
-for (let i = 0; i < 20; i++) {
-	console.log(`i is now ${i}`)
+
+let loop = "loopy-loop "
+// loop += "hello"
+for (let i = 0; i < 10; i++) {
+	console.log(`i vaut maintenant: ${i}`)
+	loop += "loopy-loop "
+	// console.log(loop)
 }
+
+// console.log(loop)
+
 /**
  * Infinite loop:
  * To cancel a process : Ctrl + C
  */
-
-// for (let i = 0; ; i++) {
-// 	console.log(`i is now ${i}`)
+// ! Infinte loop here
+// for (let i = 0; i < 5; i--) {
+// 	console.log(i)
 // }
 
 // while loop
 
-let myName = "a"
-while (myName.length < 1) {
-	myName += "Hi !"
+let myString = ""
+let count = 0
+while (myString.length < 100) {
+	myString += "aaaaaa"
+	count++
 }
 
-console.log(myName)
+console.log(count)
 
-const now = Date.now()
+const startTime = Date.now()
+// console.log(startTime)
 
+let counter = 0
+let delta
+
+console.time("whileLoop")
 do {
-	console.log("Time is running...")
-} while (Date.now() - now < 1000)
+	counter++
+	delta = Date.now() - startTime
+	console.log("Delta: ", delta)
+} while (delta < 2000)
 
-console.log(Date.now(), new Date())
-console.log(
-	new Intl.DateTimeFormat(undefined, {
-		dateStyle: "full",
-		timeStyle: "short",
-	}).format(new Date())
-)
-
-// for ... of loop
-const myArray = ["Cat", "Potato", "Car"]
-
-const myVariable = "Well hello there!"
-for (let i = 0; i < myArray.length; i++) {
-	console.log(myArray[i])
-}
-
-let newVariable = "*"
-for (let i = 0; i < myVariable.length; i++) {
-	// console.log(myVariable[i])
-	console.log(newVariable)
-	newVariable += myVariable[i] + "*"
-}
-
-for (let i = myVariable.length - 1; i >= 0; i--) {
-	console.log(myVariable[i])
-}
-
-for (const element of myArray) {
-	console.log(element)
-}
-
+console.log(counter)
+console.timeEnd("whileLoop")
 // break and continue
-let index = 0
-while (index < 100) {
-	if (index === 3) {
-		// Go to the next iteration
-		index++
+
+for (let i = 0; i < 100; i++) {
+	if (i % 2 === 0) {
 		continue
 	}
-	if (index === 6) {
-		// Stop the while loop
+	if (i > 15) {
 		break
 	}
-	console.log("i is now " + index)
-	index++
+	console.log(i)
 }
+
+// Starification
+
+let myName = "florian"
+// *f*l*o*r*i*a*n*
+let newName = ""
+
+for (let i = 0; i < myName.length; i++) {
+	newName += "*" + myName[i]
+	if (i === myName.length - 1) {
+		newName += "*"
+	}
+}
+console.log(newName)
